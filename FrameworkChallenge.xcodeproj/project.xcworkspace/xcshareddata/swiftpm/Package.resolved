@@ -1,0 +1,52 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "state": {
+          "branch": "master",
+          "revision": "4e1103600bef06bd26e42564063e8fe8c25ef3d2",
+          "version": null
+        }
+      },
+      {
+        "package": "RxDataSources",
+        "repositoryURL": "https://github.com/RxSwiftCommunity/RxDataSources",
+        "state": {
+          "branch": "main",
+          "revision": "f671317335633fe9396fd3522dca1f5e64fc29c1",
+          "version": null
+        }
+      },
+      {
+        "package": "RxGesture",
+        "repositoryURL": "https://github.com/RxSwiftCommunity/RxGesture",
+        "state": {
+          "branch": "main",
+          "revision": "53ebed7fe3f15021bf518d9d1e8b147e2ddffa0a",
+          "version": null
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift",
+        "state": {
+          "branch": "main",
+          "revision": "7741a11cb4252c379c8e034508cb1b92b8b40427",
+          "version": null
+        }
+      },
+      {
+        "package": "RxSwiftExt",
+        "repositoryURL": "https://github.com/RxSwiftCommunity/RxSwiftExt",
+        "state": {
+          "branch": "main",
+          "revision": "fd754f9c5e3a9da0f0b2b2f8a2d83a1e4ad9f281",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
