@@ -17,6 +17,12 @@
 		62E480C827BCFEFC00BDDECE /* FrameworkChallangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E480C727BCFEFC00BDDECE /* FrameworkChallangeTests.swift */; };
 		62E480D227BCFEFC00BDDECE /* FrameworkChallangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E480D127BCFEFC00BDDECE /* FrameworkChallangeUITests.swift */; };
 		62E480D427BCFEFC00BDDECE /* FrameworkChallangeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E480D327BCFEFC00BDDECE /* FrameworkChallangeUITestsLaunchTests.swift */; };
+		62E480E727BD01C600BDDECE /* Todos+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E480E127BD01C600BDDECE /* Todos+CoreDataClass.swift */; };
+		62E480E827BD01C600BDDECE /* Todos+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E480E227BD01C600BDDECE /* Todos+CoreDataProperties.swift */; };
+		62E480E927BD01C600BDDECE /* Album+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E480E327BD01C600BDDECE /* Album+CoreDataClass.swift */; };
+		62E480EA27BD01C600BDDECE /* Album+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E480E427BD01C600BDDECE /* Album+CoreDataProperties.swift */; };
+		62E480EB27BD01C600BDDECE /* Post+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E480E527BD01C600BDDECE /* Post+CoreDataClass.swift */; };
+		62E480EC27BD01C600BDDECE /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E480E627BD01C600BDDECE /* Post+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		62E480CD27BCFEFC00BDDECE /* FrameworkChallangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrameworkChallangeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E480D127BCFEFC00BDDECE /* FrameworkChallangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkChallangeUITests.swift; sourceTree = "<group>"; };
 		62E480D327BCFEFC00BDDECE /* FrameworkChallangeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworkChallangeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		62E480E127BD01C600BDDECE /* Todos+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todos+CoreDataClass.swift"; sourceTree = "<group>"; };
+		62E480E227BD01C600BDDECE /* Todos+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Todos+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		62E480E327BD01C600BDDECE /* Album+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Album+CoreDataClass.swift"; sourceTree = "<group>"; };
+		62E480E427BD01C600BDDECE /* Album+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Album+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		62E480E527BD01C600BDDECE /* Post+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataClass.swift"; sourceTree = "<group>"; };
+		62E480E627BD01C600BDDECE /* Post+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,7 @@
 		62E480A127BCFEFB00BDDECE = {
 			isa = PBXGroup;
 			children = (
+				62E480E027BD012C00BDDECE /* FrameworkChallangeDataBase */,
 				62E480AC27BCFEFB00BDDECE /* FrameworkChallange */,
 				62E480C627BCFEFC00BDDECE /* FrameworkChallangeTests */,
 				62E480D027BCFEFC00BDDECE /* FrameworkChallangeUITests */,
@@ -108,7 +121,6 @@
 				62E480B927BCFEFC00BDDECE /* Assets.xcassets */,
 				62E480BB27BCFEFC00BDDECE /* LaunchScreen.storyboard */,
 				62E480BE27BCFEFC00BDDECE /* Info.plist */,
-				62E480B627BCFEFB00BDDECE /* FrameworkChallange.xcdatamodeld */,
 			);
 			path = FrameworkChallange;
 			sourceTree = "<group>";
@@ -128,6 +140,20 @@
 				62E480D327BCFEFC00BDDECE /* FrameworkChallangeUITestsLaunchTests.swift */,
 			);
 			path = FrameworkChallangeUITests;
+			sourceTree = "<group>";
+		};
+		62E480E027BD012C00BDDECE /* FrameworkChallangeDataBase */ = {
+			isa = PBXGroup;
+			children = (
+				62E480E127BD01C600BDDECE /* Todos+CoreDataClass.swift */,
+				62E480E227BD01C600BDDECE /* Todos+CoreDataProperties.swift */,
+				62E480E327BD01C600BDDECE /* Album+CoreDataClass.swift */,
+				62E480E427BD01C600BDDECE /* Album+CoreDataProperties.swift */,
+				62E480E527BD01C600BDDECE /* Post+CoreDataClass.swift */,
+				62E480E627BD01C600BDDECE /* Post+CoreDataProperties.swift */,
+				62E480B627BCFEFB00BDDECE /* FrameworkChallange.xcdatamodeld */,
+			);
+			path = FrameworkChallangeDataBase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +287,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E480E727BD01C600BDDECE /* Todos+CoreDataClass.swift in Sources */,
 				62E480B827BCFEFB00BDDECE /* FrameworkChallange.xcdatamodeld in Sources */,
 				62E480B227BCFEFB00BDDECE /* ViewController.swift in Sources */,
+				62E480EC27BD01C600BDDECE /* Post+CoreDataProperties.swift in Sources */,
+				62E480E827BD01C600BDDECE /* Todos+CoreDataProperties.swift in Sources */,
+				62E480EB27BD01C600BDDECE /* Post+CoreDataClass.swift in Sources */,
 				62E480AE27BCFEFB00BDDECE /* AppDelegate.swift in Sources */,
+				62E480EA27BD01C600BDDECE /* Album+CoreDataProperties.swift in Sources */,
+				62E480E927BD01C600BDDECE /* Album+CoreDataClass.swift in Sources */,
 				62E480B027BCFEFB00BDDECE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
