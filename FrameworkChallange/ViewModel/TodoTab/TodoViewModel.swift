@@ -15,7 +15,7 @@ class TodoViewModel {
     
     var disposable: DisposeBag = DisposeBag()
     
-    func fetchPost() {
+    func fetchTodo() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Todos")

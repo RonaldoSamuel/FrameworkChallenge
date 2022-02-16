@@ -20,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let navController = UINavigationController()
         coordinator = MainCoordinator(navigationController: navController)
-        coordinator?.start()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navController
@@ -34,7 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .subscribe(
                 onNext: {
                     result in
-                    print(result)
                     self.createAlbums(item: result)
                 },
                 onError: { error in
@@ -59,8 +57,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .subscribe(
                 onNext: {
                     result in
-                    print(result)
                     self.createTodos(item: result)
+                    self.coordinator?.start()
                 },
                 onError: { error in
                     print(error)

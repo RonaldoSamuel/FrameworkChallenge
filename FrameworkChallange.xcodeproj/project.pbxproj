@@ -236,7 +236,6 @@
 				62E480F227BD025A00BDDECE /* App */,
 				62E480F327BD026900BDDECE /* Constants */,
 				62E480F427BD026E00BDDECE /* Extension */,
-				62E480F527BD027400BDDECE /* Helper */,
 				62E480F627BD027800BDDECE /* Navigation */,
 				62E480F727BD027E00BDDECE /* Networking */,
 				62E4810D27BD040E00BDDECE /* Protocol */,
@@ -304,13 +303,6 @@
 				62E4812727BD084400BDDECE /* UIView+Extensions.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		62E480F527BD027400BDDECE /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 		62E480F627BD027800BDDECE /* Navigation */ = {
@@ -617,7 +609,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 62E480A527BCFEFB00BDDECE /* Build configuration list for PBXProject "FrameworkChallenge" */;
+			buildConfigurationList = 62E480A527BCFEFB00BDDECE /* Build configuration list for PBXProject "FrameworkChallange" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1019,7 +1011,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		62E480A527BCFEFB00BDDECE /* Build configuration list for PBXProject "FrameworkChallenge" */ = {
+		62E480A527BCFEFB00BDDECE /* Build configuration list for PBXProject "FrameworkChallange" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				62E480D527BCFEFC00BDDECE /* Debug */,

@@ -22,7 +22,8 @@ class TodoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewModel.fetchPost()
+        self.navigationController?.navigationBar.isHidden = true
+        self.viewModel.fetchTodo()
         self.bindView()
     }
 
@@ -44,10 +45,8 @@ class TodoViewController: UIViewController {
         
         self.presentationView.tableList.rx.itemSelected
           .subscribe(onNext: { [weak self] indexPath in
-              let cell = self?.presentationView.tableList.cellForRow(at: indexPath) as? PostViewCell
+              let cell = self?.presentationView.tableList.cellForRow(at: indexPath) as? TodoViewCell
               self?.presentationView.tableList.beginUpdates()
-              cell?.heightAnchor.constraint(equalToConstant: 10)
-              cell?.userClickEffect()
               self?.presentationView.tableList.endUpdates()
           }).disposed(by: disposable)
     }

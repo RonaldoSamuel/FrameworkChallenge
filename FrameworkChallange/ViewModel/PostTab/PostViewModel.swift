@@ -25,7 +25,6 @@ class PostViewModel {
 
             for result in results {
                 let resultado = result as! Post
-                print(resultado.body)
                 list.append(PostModelElement(item: resultado))
             }
             

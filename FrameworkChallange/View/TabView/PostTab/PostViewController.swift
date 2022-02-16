@@ -23,6 +23,7 @@ class PostViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         self.viewModel.fetchPost()
         self.bindView()
         // Do any additional setup after loading the view.

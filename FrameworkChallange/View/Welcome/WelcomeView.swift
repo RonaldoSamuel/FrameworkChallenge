@@ -12,7 +12,7 @@ class WelcomeView: UIView, BaseView {
     
     var logoIcon: UIImageView = {
        var img = UIImageView()
-        img.image = UIImage(named: "frameworkLogo")
+        img.image = UIImage(named: "FrameworkLogo")
         img.contentMode = .scaleAspectFit
         img.translatesAutoresizingMaskIntoConstraints = false
         return img
@@ -20,7 +20,7 @@ class WelcomeView: UIView, BaseView {
     
     var label: UILabel = {
        var lbl = UILabel()
-        lbl.text = "Framework Challange"
+        lbl.text = "Framework Challenge"
         lbl.textAlignment = .center
         lbl.textColor = .white
         lbl.font = UIFont.boldSystemFont(ofSize: 25)

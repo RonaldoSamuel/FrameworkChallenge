@@ -108,6 +108,7 @@ class PostViewCell: UITableViewCell {
     }
     
     func makeTableViewLarger() {
+            backgroundColor = UIColor(red: 0.97, green: 0.97, blue: 0.97, alpha: 1.00)
         lblTitle.numberOfLines = 0
         lblDescription.numberOfLines = 0
         topConstraint.constant = 10
@@ -116,6 +117,7 @@ class PostViewCell: UITableViewCell {
     }
     
     func makeTableViewSmaller() {
+        backgroundColor = UIColor(red: 0.94, green: 0.94, blue: 0.94, alpha: 1.00)
         lblTitle.numberOfLines = 1
         lblDescription.numberOfLines = 1
         topConstraint.constant = 5

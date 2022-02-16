@@ -42,7 +42,7 @@ class AlbumView: UIView, BaseView {
     func setupTableView() {
         addSubview(tableList)
         NSLayoutConstraint.activate([
-            tableList.topAnchor.constraint(equalTo: topAnchor,constant: 15),
+            tableList.topAnchor.constraint(equalTo: topAnchor,constant: 45),
             tableList.bottomAnchor.constraint(equalTo: bottomAnchor),
             tableList.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableList.trailingAnchor.constraint(equalTo: trailingAnchor)

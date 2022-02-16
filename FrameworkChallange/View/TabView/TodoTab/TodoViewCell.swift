@@ -42,7 +42,10 @@ class TodoViewCell: UITableViewCell {
     }
     
     func createSubViews() {
-               
+        backgroundColor = UIColor(red: 0.94, green: 0.94, blue: 0.94, alpha: 1.00)
+        layer.cornerRadius = 15
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.white.cgColor
         setupTitle()
     }
     
