@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-extension Todos {
+extension TodoS {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Todos> {
         return NSFetchRequest<Todos>(entityName: "Todos")

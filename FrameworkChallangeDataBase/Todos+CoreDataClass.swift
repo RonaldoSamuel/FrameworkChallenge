@@ -10,6 +10,6 @@ import Foundation
 import CoreData
 
 @objc(Todos)
-public class Todos: NSManagedObject {
+public class TodoS: NSManagedObject {
 
 }

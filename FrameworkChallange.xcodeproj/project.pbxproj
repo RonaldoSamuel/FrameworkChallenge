@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		62E480AE27BCFEFB00BDDECE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E480AD27BCFEFB00BDDECE /* AppDelegate.swift */; };
-		62E480B027BCFEFB00BDDECE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E480AF27BCFEFB00BDDECE /* SceneDelegate.swift */; };
-		62E480B227BCFEFB00BDDECE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E480B127BCFEFB00BDDECE /* ViewController.swift */; };
-		62E480B527BCFEFB00BDDECE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62E480B327BCFEFB00BDDECE /* Main.storyboard */; };
 		62E480B827BCFEFB00BDDECE /* FrameworkChallange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62E480B627BCFEFB00BDDECE /* FrameworkChallange.xcdatamodeld */; };
 		62E480BA27BCFEFC00BDDECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62E480B927BCFEFC00BDDECE /* Assets.xcassets */; };
 		62E480BD27BCFEFC00BDDECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62E480BB27BCFEFC00BDDECE /* LaunchScreen.storyboard */; };
@@ -23,6 +20,14 @@
 		62E480EA27BD01C600BDDECE /* Album+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E480E427BD01C600BDDECE /* Album+CoreDataProperties.swift */; };
 		62E480EB27BD01C600BDDECE /* Post+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E480E527BD01C600BDDECE /* Post+CoreDataClass.swift */; };
 		62E480EC27BD01C600BDDECE /* Post+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E480E627BD01C600BDDECE /* Post+CoreDataProperties.swift */; };
+		62E480FA27BD031E00BDDECE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 62E480F927BD031E00BDDECE /* Alamofire */; };
+		62E480FD27BD037500BDDECE /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 62E480FC27BD037500BDDECE /* RxCocoa */; };
+		62E480FF27BD037500BDDECE /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 62E480FE27BD037500BDDECE /* RxRelay */; };
+		62E4810127BD037500BDDECE /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 62E4810027BD037500BDDECE /* RxSwift */; };
+		62E4810427BD03AA00BDDECE /* Differentiator in Frameworks */ = {isa = PBXBuildFile; productRef = 62E4810327BD03AA00BDDECE /* Differentiator */; };
+		62E4810627BD03AA00BDDECE /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 62E4810527BD03AA00BDDECE /* RxDataSources */; };
+		62E4810927BD03B700BDDECE /* RxSwiftExt in Frameworks */ = {isa = PBXBuildFile; productRef = 62E4810827BD03B700BDDECE /* RxSwiftExt */; };
+		62E4810C27BD03D400BDDECE /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 62E4810B27BD03D400BDDECE /* RxGesture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +50,6 @@
 /* Begin PBXFileReference section */
 		62E480AA27BCFEFB00BDDECE /* FrameworkChallange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameworkChallange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E480AD27BCFEFB00BDDECE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		62E480AF27BCFEFB00BDDECE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		62E480B127BCFEFB00BDDECE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		62E480B427BCFEFB00BDDECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62E480B727BCFEFB00BDDECE /* FrameworkChallange.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FrameworkChallange.xcdatamodel; sourceTree = "<group>"; };
 		62E480B927BCFEFC00BDDECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62E480BC27BCFEFC00BDDECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E480FF27BD037500BDDECE /* RxRelay in Frameworks */,
+				62E4810427BD03AA00BDDECE /* Differentiator in Frameworks */,
+				62E4810C27BD03D400BDDECE /* RxGesture in Frameworks */,
+				62E480FD27BD037500BDDECE /* RxCocoa in Frameworks */,
+				62E4810627BD03AA00BDDECE /* RxDataSources in Frameworks */,
+				62E4810127BD037500BDDECE /* RxSwift in Frameworks */,
+				62E4810927BD03B700BDDECE /* RxSwiftExt in Frameworks */,
+				62E480FA27BD031E00BDDECE /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,13 +124,13 @@
 		62E480AC27BCFEFB00BDDECE /* FrameworkChallange */ = {
 			isa = PBXGroup;
 			children = (
-				62E480AD27BCFEFB00BDDECE /* AppDelegate.swift */,
-				62E480AF27BCFEFB00BDDECE /* SceneDelegate.swift */,
-				62E480B127BCFEFB00BDDECE /* ViewController.swift */,
-				62E480B327BCFEFB00BDDECE /* Main.storyboard */,
-				62E480B927BCFEFC00BDDECE /* Assets.xcassets */,
+				62E4810F27BD044000BDDECE /* Assets */,
+				62E480ED27BD020200BDDECE /* Core */,
+				62E480F027BD021000BDDECE /* Model */,
+				62E480EE27BD020800BDDECE /* View */,
+				62E480EF27BD020C00BDDECE /* ViewModel */,
+				62E480F127BD022B00BDDECE /* Supporting Files */,
 				62E480BB27BCFEFC00BDDECE /* LaunchScreen.storyboard */,
-				62E480BE27BCFEFC00BDDECE /* Info.plist */,
 			);
 			path = FrameworkChallange;
 			sourceTree = "<group>";
@@ -156,6 +166,115 @@
 			path = FrameworkChallangeDataBase;
 			sourceTree = "<group>";
 		};
+		62E480ED27BD020200BDDECE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				62E480F227BD025A00BDDECE /* App */,
+				62E480F327BD026900BDDECE /* Constants */,
+				62E480F427BD026E00BDDECE /* Extension */,
+				62E480F527BD027400BDDECE /* Helper */,
+				62E480F627BD027800BDDECE /* Navigation */,
+				62E480F727BD027E00BDDECE /* Networking */,
+				62E4810D27BD040E00BDDECE /* Protocol */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		62E480EE27BD020800BDDECE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				62E4810E27BD042100BDDECE /* Welcome */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		62E480EF27BD020C00BDDECE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		62E480F027BD021000BDDECE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		62E480F127BD022B00BDDECE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				62E480BE27BCFEFC00BDDECE /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62E480F227BD025A00BDDECE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				62E480AD27BCFEFB00BDDECE /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		62E480F327BD026900BDDECE /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		62E480F427BD026E00BDDECE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		62E480F527BD027400BDDECE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		62E480F627BD027800BDDECE /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		62E480F727BD027E00BDDECE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		62E4810D27BD040E00BDDECE /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		62E4810E27BD042100BDDECE /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		62E4810F27BD044000BDDECE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				62E480B927BCFEFC00BDDECE /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,6 +291,16 @@
 			dependencies = (
 			);
 			name = FrameworkChallange;
+			packageProductDependencies = (
+				62E480F927BD031E00BDDECE /* Alamofire */,
+				62E480FC27BD037500BDDECE /* RxCocoa */,
+				62E480FE27BD037500BDDECE /* RxRelay */,
+				62E4810027BD037500BDDECE /* RxSwift */,
+				62E4810327BD03AA00BDDECE /* Differentiator */,
+				62E4810527BD03AA00BDDECE /* RxDataSources */,
+				62E4810827BD03B700BDDECE /* RxSwiftExt */,
+				62E4810B27BD03D400BDDECE /* RxGesture */,
+			);
 			productName = FrameworkChallange;
 			productReference = 62E480AA27BCFEFB00BDDECE /* FrameworkChallange.app */;
 			productType = "com.apple.product-type.application";
@@ -244,6 +373,13 @@
 				Base,
 			);
 			mainGroup = 62E480A127BCFEFB00BDDECE;
+			packageReferences = (
+				62E480F827BD031E00BDDECE /* XCRemoteSwiftPackageReference "Alamofire" */,
+				62E480FB27BD037500BDDECE /* XCRemoteSwiftPackageReference "RxSwift" */,
+				62E4810227BD03AA00BDDECE /* XCRemoteSwiftPackageReference "RxDataSources" */,
+				62E4810727BD03B700BDDECE /* XCRemoteSwiftPackageReference "RxSwiftExt" */,
+				62E4810A27BD03D400BDDECE /* XCRemoteSwiftPackageReference "RxGesture" */,
+			);
 			productRefGroup = 62E480AB27BCFEFB00BDDECE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -262,7 +398,6 @@
 			files = (
 				62E480BD27BCFEFC00BDDECE /* LaunchScreen.storyboard in Resources */,
 				62E480BA27BCFEFC00BDDECE /* Assets.xcassets in Resources */,
-				62E480B527BCFEFB00BDDECE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,14 +424,12 @@
 			files = (
 				62E480E727BD01C600BDDECE /* Todos+CoreDataClass.swift in Sources */,
 				62E480B827BCFEFB00BDDECE /* FrameworkChallange.xcdatamodeld in Sources */,
-				62E480B227BCFEFB00BDDECE /* ViewController.swift in Sources */,
 				62E480EC27BD01C600BDDECE /* Post+CoreDataProperties.swift in Sources */,
 				62E480E827BD01C600BDDECE /* Todos+CoreDataProperties.swift in Sources */,
 				62E480EB27BD01C600BDDECE /* Post+CoreDataClass.swift in Sources */,
 				62E480AE27BCFEFB00BDDECE /* AppDelegate.swift in Sources */,
 				62E480EA27BD01C600BDDECE /* Album+CoreDataProperties.swift in Sources */,
 				62E480E927BD01C600BDDECE /* Album+CoreDataClass.swift in Sources */,
-				62E480B027BCFEFB00BDDECE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,14 +466,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		62E480B327BCFEFB00BDDECE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				62E480B427BCFEFB00BDDECE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		62E480BB27BCFEFC00BDDECE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -640,6 +765,92 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		62E480F827BD031E00BDDECE /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		62E480FB27BD037500BDDECE /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		62E4810227BD03AA00BDDECE /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		62E4810727BD03B700BDDECE /* XCRemoteSwiftPackageReference "RxSwiftExt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxSwiftExt";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		62E4810A27BD03D400BDDECE /* XCRemoteSwiftPackageReference "RxGesture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxGesture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		62E480F927BD031E00BDDECE /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62E480F827BD031E00BDDECE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		62E480FC27BD037500BDDECE /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62E480FB27BD037500BDDECE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		62E480FE27BD037500BDDECE /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62E480FB27BD037500BDDECE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		62E4810027BD037500BDDECE /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62E480FB27BD037500BDDECE /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		62E4810327BD03AA00BDDECE /* Differentiator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62E4810227BD03AA00BDDECE /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = Differentiator;
+		};
+		62E4810527BD03AA00BDDECE /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62E4810227BD03AA00BDDECE /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
+		};
+		62E4810827BD03B700BDDECE /* RxSwiftExt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62E4810727BD03B700BDDECE /* XCRemoteSwiftPackageReference "RxSwiftExt" */;
+			productName = RxSwiftExt;
+		};
+		62E4810B27BD03D400BDDECE /* RxGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62E4810A27BD03D400BDDECE /* XCRemoteSwiftPackageReference "RxGesture" */;
+			productName = RxGesture;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		62E480B627BCFEFB00BDDECE /* FrameworkChallange.xcdatamodeld */ = {
