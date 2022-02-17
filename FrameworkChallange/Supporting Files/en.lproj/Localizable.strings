@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  FrameworkChallange
+
+  Created by Ronaldo Filho on 17/02/22.
+  
+*/
+
+lblWelcomeTitle = "Framework Challenge";
+lblWelcomeEnter = "ENTER";
+lblTabPost = "Post";
+lblTabAlbum = "Album";
+lblTabToDo = "To do";

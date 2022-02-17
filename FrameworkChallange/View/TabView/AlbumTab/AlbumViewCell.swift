@@ -11,7 +11,6 @@ class AlbumViewCell: UITableViewCell {
     
     static let identifier = "AlbumViewCell"
 
-            
     var lblTitle: UILabel = {
         var lbl = UILabel()
         lbl.numberOfLines = 0

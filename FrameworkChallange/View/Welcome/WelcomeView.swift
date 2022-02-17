@@ -20,7 +20,7 @@ class WelcomeView: UIView, BaseView {
     
     var label: UILabel = {
         var lbl = UILabel()
-        lbl.text = "Framework Challenge"
+        lbl.text = "lblWelcomeTitle".translate
         lbl.textAlignment = .center
         lbl.textColor = .white
         lbl.font = UIFont.boldSystemFont(ofSize: 25)
@@ -33,7 +33,7 @@ class WelcomeView: UIView, BaseView {
         btn.layer.cornerRadius = 10
         btn.backgroundColor = UIColor(red: 0.22, green: 0.17, blue: 0.45, alpha: 1.00)
         btn.setTitleColor(.white, for: .normal)
-        btn.setTitle("ENTRAR", for: .normal)
+        btn.setTitle("lblWelcomeEnter".translate, for: .normal)
         btn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
@@ -56,8 +56,7 @@ class WelcomeView: UIView, BaseView {
     }
     
     func setupBackgroundView() {
-        setGradientBackground(horizontal: false,
-                              colorTop: UIColor(red: 0.82, green: 0.69, blue: 0.98, alpha: 1.00),
+        setGradientBackground(colorTop: UIColor(red: 0.82, green: 0.69, blue: 0.98, alpha: 1.00),
                               colorBottom: UIColor(red: 0.28, green: 0.19, blue: 0.50, alpha: 1.00))
     }
     

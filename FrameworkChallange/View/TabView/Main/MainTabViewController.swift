@@ -28,19 +28,19 @@ class MainTabViewController: UITabBarController {
         let albumView = AlbumViewController()
         albumView.coordinator = coordinator
         let albumImg = UIImage(named: .ic_albums)
-        let albumItem = UITabBarItem(title: "Albums", image: albumImg, tag: 1)
+        let albumItem = UITabBarItem(title: "lblTabAlbum".translate, image: albumImg, tag: 1)
         albumView.tabBarItem = albumItem
         
         let todosView = TodoViewController()
         todosView.coordinator = coordinator
         let todosImg = UIImage(named: .ic_todos)
-        let todosItem = UITabBarItem(title: "Todos", image: todosImg, tag: 1)
+        let todosItem = UITabBarItem(title: "lblTabToDo".translate, image: todosImg, tag: 1)
         todosView.tabBarItem = todosItem
         
         let postView = PostViewController()
         postView.coordinator = coordinator
         let postImg = UIImage(named: .ic_posts)
-        let postItem = UITabBarItem(title: "Posts", image: postImg, tag: 1)
+        let postItem = UITabBarItem(title: "lblTabPost".translate, image: postImg, tag: 1)
         postView.tabBarItem = postItem
         
         
