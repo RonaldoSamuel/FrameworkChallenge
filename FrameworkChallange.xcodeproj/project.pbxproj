@@ -26,8 +26,6 @@
 		62E4811227BD05B900BDDECE /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4811127BD05B900BDDECE /* MainCoordinator.swift */; };
 		62E4811427BD05F100BDDECE /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4811327BD05F100BDDECE /* CoordinatorProtocol.swift */; };
 		62E4811627BD061700BDDECE /* ViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4811527BD061700BDDECE /* ViewProtocol.swift */; };
-		62E4811827BD063000BDDECE /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4811727BD063000BDDECE /* ViewControllerProtocol.swift */; };
-		62E4811A27BD063700BDDECE /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4811927BD063700BDDECE /* ViewModelProtocol.swift */; };
 		62E4811E27BD068000BDDECE /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4811D27BD068000BDDECE /* TypeAlias.swift */; };
 		62E4812227BD071C00BDDECE /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4812127BD071C00BDDECE /* WelcomeCoordinator.swift */; };
 		62E4812427BD077400BDDECE /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E4812327BD077400BDDECE /* WelcomeView.swift */; };
@@ -118,8 +116,6 @@
 		62E4811127BD05B900BDDECE /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		62E4811327BD05F100BDDECE /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		62E4811527BD061700BDDECE /* ViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProtocol.swift; sourceTree = "<group>"; };
-		62E4811727BD063000BDDECE /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
-		62E4811927BD063700BDDECE /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		62E4811D27BD068000BDDECE /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
 		62E4812127BD071C00BDDECE /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
 		62E4812327BD077400BDDECE /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -372,8 +368,6 @@
 			children = (
 				62E4811327BD05F100BDDECE /* CoordinatorProtocol.swift */,
 				62E4811527BD061700BDDECE /* ViewProtocol.swift */,
-				62E4811727BD063000BDDECE /* ViewControllerProtocol.swift */,
-				62E4811927BD063700BDDECE /* ViewModelProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -708,7 +702,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				62E4816427BD23DB00BDDECE /* NetworkLogger.swift in Sources */,
-				62E4811827BD063000BDDECE /* ViewControllerProtocol.swift in Sources */,
 				62E4812227BD071C00BDDECE /* WelcomeCoordinator.swift in Sources */,
 				62EF80D127BEC4FD0087E73D /* TranslationHelper.swift in Sources */,
 				62E4818E27BD2AA000BDDECE /* Post+DatabaseProperties.swift in Sources */,
@@ -730,7 +723,6 @@
 				62E4811427BD05F100BDDECE /* CoordinatorProtocol.swift in Sources */,
 				62E4818827BD290F00BDDECE /* Album+DataBaseClass.swift in Sources */,
 				622DB5F127BD5DE300491A5C /* TodoViewModel.swift in Sources */,
-				62E4811A27BD063700BDDECE /* ViewModelProtocol.swift in Sources */,
 				62E4813A27BD13B200BDDECE /* TodoView.swift in Sources */,
 				62E4812827BD084400BDDECE /* UIView+Extensions.swift in Sources */,
 				62E4817D27BD262200BDDECE /* TodoCodable.swift in Sources */,
