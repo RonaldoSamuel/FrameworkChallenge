@@ -28,6 +28,13 @@ class TodoViewController: UIViewController {
     }
 
     func bindView() {
+        
+        viewModel.dataSouce.bind { value in
+            if !value.isEmpty {
+                self.presentationView.tableList.refreshControl?.endRefreshing()
+            }
+        }.disposed(by: disposable)
+        
         viewModel.dataSouce
             .bind(
                 to: presentationView
@@ -43,12 +50,11 @@ class TodoViewController: UIViewController {
                 cell.configCell(data)
             }.disposed(by: disposable)
         
-        self.presentationView.tableList.rx.itemSelected
-          .subscribe(onNext: { [weak self] indexPath in
-              let cell = self?.presentationView.tableList.cellForRow(at: indexPath) as? TodoViewCell
-              self?.presentationView.tableList.beginUpdates()
-              self?.presentationView.tableList.endUpdates()
-          }).disposed(by: disposable)
+        presentationView.tableList.refreshControl?.rx
+            .controlEvent(.valueChanged)
+            .bind {
+                self.viewModel.fetchTodo()
+            }.disposed(by: disposable)
     }
 
 }

@@ -9,6 +9,21 @@ import XCTest
 @testable import FrameworkChallange
 
 class FrameworkChallangeTests: XCTestCase {
+    
+    override func setUp() {
+        DataBaseCreationHelper.instance.callApis()
+    }
+    
+    func testIfHasDataInTheDataBase() throws {
+        XCTAssertTrue(!DataBaseFetchHelper.instance.fetchPost().isEmpty && !DataBaseFetchHelper.instance.fetchAlbums().isEmpty && !DataBaseFetchHelper.instance.fetchTodo().isEmpty)
+    }
+    
+    func testIfContextHasNoChangesToBeSaved() throws {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        XCTAssertTrue(!context.hasChanges)
+    }
+    
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

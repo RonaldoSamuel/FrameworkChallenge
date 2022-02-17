@@ -24,7 +24,7 @@ class TodoViewCell: UITableViewCell {
     
     var markImage: UIImageView = {
     var imgView = UIImageView()
-        imgView.image = UIImage(named: "ic_arrowDown")?.withRenderingMode(.alwaysTemplate)
+        imgView.image = UIImage(named: .ic_unchecked)?.withRenderingMode(.alwaysTemplate)
         imgView.tintColor = .gray
         imgView.contentMode = .scaleAspectFit
         imgView.translatesAutoresizingMaskIntoConstraints = false
@@ -53,18 +53,17 @@ class TodoViewCell: UITableViewCell {
         
         contentView.addSubview(lblTitle)
         NSLayoutConstraint.activate([
-            lblTitle.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            lblTitle.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0),
             lblTitle.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             lblTitle.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -size.width * 0.30),
-            lblTitle.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15)
+            lblTitle.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 0)
         ])
         
         contentView.addSubview(markImage)
         NSLayoutConstraint.activate([
             markImage.topAnchor.constraint(equalTo: lblTitle.topAnchor, constant: 0),
-            markImage.leadingAnchor.constraint(equalTo: lblTitle.trailingAnchor, constant: size.width * 0.15),
             markImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
-            markImage.heightAnchor.constraint(equalToConstant: 25),
+            markImage.widthAnchor.constraint(equalToConstant: 25),
             markImage.bottomAnchor.constraint(equalTo: lblTitle.bottomAnchor, constant: 0)
         ])
         
@@ -73,7 +72,7 @@ class TodoViewCell: UITableViewCell {
     func configCell(_ data: TodoModelElement) {
         lblTitle.text = data.title
         lblTitle.textColor = .black
-        markImage.image = data.completed ? UIImage(named: "ic_checked") : UIImage(named: "ic_unchecked")
+        markImage.image = data.completed ? UIImage(named: .ic_checked) : UIImage(named: .ic_unchecked)
         
     }
 

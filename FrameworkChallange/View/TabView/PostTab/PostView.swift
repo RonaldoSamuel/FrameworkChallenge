@@ -32,7 +32,7 @@ class PostView: UIView, BaseView {
         createSubViews()
         
     }
-
+    
     func createSubViews() {
         backgroundColor = .white
         setupTableView()

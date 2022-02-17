@@ -11,15 +11,15 @@ import UIKit
 class WelcomeView: UIView, BaseView {
     
     var logoIcon: UIImageView = {
-       var img = UIImageView()
-        img.image = UIImage(named: "FrameworkLogo")
+        var img = UIImageView()
+        img.image = UIImage(named: .ic_logo)
         img.contentMode = .scaleAspectFit
         img.translatesAutoresizingMaskIntoConstraints = false
         return img
     }()
     
     var label: UILabel = {
-       var lbl = UILabel()
+        var lbl = UILabel()
         lbl.text = "Framework Challenge"
         lbl.textAlignment = .center
         lbl.textColor = .white
@@ -56,7 +56,9 @@ class WelcomeView: UIView, BaseView {
     }
     
     func setupBackgroundView() {
-        setGradientBackground(horizontal: false, colorTop: UIColor(red: 0.82, green: 0.69, blue: 0.98, alpha: 1.00), colorBottom: UIColor(red: 0.28, green: 0.19, blue: 0.50, alpha: 1.00))
+        setGradientBackground(horizontal: false,
+                              colorTop: UIColor(red: 0.82, green: 0.69, blue: 0.98, alpha: 1.00),
+                              colorBottom: UIColor(red: 0.28, green: 0.19, blue: 0.50, alpha: 1.00))
     }
     
     func setupLogo() {

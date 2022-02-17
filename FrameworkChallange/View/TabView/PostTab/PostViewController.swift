@@ -20,16 +20,22 @@ class PostViewController: UIViewController {
     override func loadView() {
         view = presentationView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         self.viewModel.fetchPost()
         self.bindView()
-        // Do any additional setup after loading the view.
     }
-
+    
     func bindView() {
+        
+        viewModel.dataSouce.bind { value in
+            if !value.isEmpty {
+                self.presentationView.tableList.refreshControl?.endRefreshing()
+            }
+        }.disposed(by: disposable)
+        
         viewModel.dataSouce
             .bind(
                 to: presentationView
@@ -41,18 +47,23 @@ class PostViewController: UIViewController {
                     )
             ) { _, data, cell in
                 cell.selectionStyle = .none
-
+                
                 cell.configCell(data)
             }.disposed(by: disposable)
         
         self.presentationView.tableList.rx.itemSelected
-          .subscribe(onNext: { [weak self] indexPath in
-              let cell = self?.presentationView.tableList.cellForRow(at: indexPath) as? PostViewCell
-              self?.presentationView.tableList.beginUpdates()
-              cell?.heightAnchor.constraint(equalToConstant: 10)
-              cell?.userClickEffect()
-              self?.presentationView.tableList.endUpdates()
-          }).disposed(by: disposable)
+            .subscribe(onNext: { [weak self] indexPath in
+                let cell = self?.presentationView.tableList.cellForRow(at: indexPath) as? PostViewCell
+                self?.presentationView.tableList.beginUpdates()
+                cell?.userClickEffect()
+                self?.presentationView.tableList.endUpdates()
+            }).disposed(by: disposable)
+        
+        presentationView.tableList.refreshControl?.rx
+            .controlEvent(.valueChanged)
+            .bind {
+                self.viewModel.fetchPost()
+            }.disposed(by: disposable)
     }
-
+    
 }

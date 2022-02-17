@@ -13,6 +13,10 @@
 		622DB5EF27BD47E800491A5C /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622DB5EE27BD47E800491A5C /* PostViewModel.swift */; };
 		622DB5F127BD5DE300491A5C /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622DB5F027BD5DE300491A5C /* TodoViewModel.swift */; };
 		622DB5F327BD5DEC00491A5C /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622DB5F227BD5DEC00491A5C /* AlbumViewModel.swift */; };
+		62DD282E27BE65F200701047 /* DataBaseCreationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD282D27BE65F200701047 /* DataBaseCreationHelper.swift */; };
+		62DD283027BE6B8A00701047 /* DataBaseUpdateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD282F27BE6B8900701047 /* DataBaseUpdateHelper.swift */; };
+		62DD283227BE730D00701047 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD283127BE730D00701047 /* Images.swift */; };
+		62DD283427BE743100701047 /* DataBaseFetchHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD283327BE743100701047 /* DataBaseFetchHelper.swift */; };
 		62E480AE27BCFEFB00BDDECE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E480AD27BCFEFB00BDDECE /* AppDelegate.swift */; };
 		62E480B827BCFEFB00BDDECE /* FrameworkChallange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62E480B627BCFEFB00BDDECE /* FrameworkChallange.xcdatamodeld */; };
 		62E480BD27BCFEFC00BDDECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62E480BB27BCFEFC00BDDECE /* LaunchScreen.storyboard */; };
@@ -93,6 +97,10 @@
 		622DB5EE27BD47E800491A5C /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		622DB5F027BD5DE300491A5C /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
 		622DB5F227BD5DEC00491A5C /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		62DD282D27BE65F200701047 /* DataBaseCreationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseCreationHelper.swift; sourceTree = "<group>"; };
+		62DD282F27BE6B8900701047 /* DataBaseUpdateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseUpdateHelper.swift; sourceTree = "<group>"; };
+		62DD283127BE730D00701047 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		62DD283327BE743100701047 /* DataBaseFetchHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseFetchHelper.swift; sourceTree = "<group>"; };
 		62E480AA27BCFEFB00BDDECE /* FrameworkChallange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrameworkChallange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E480AD27BCFEFB00BDDECE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62E480B727BCFEFB00BDDECE /* FrameworkChallange.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FrameworkChallange.xcdatamodel; sourceTree = "<group>"; };
@@ -178,6 +186,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62DD282C27BE65E100701047 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				62DD282D27BE65F200701047 /* DataBaseCreationHelper.swift */,
+				62DD282F27BE6B8900701047 /* DataBaseUpdateHelper.swift */,
+				62DD283327BE743100701047 /* DataBaseFetchHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		62DD283527BE82A500701047 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				62E4818F27BD418600BDDECE /* PostTab */,
+				62E4819027BD419400BDDECE /* TodoTab */,
+				62E4819127BD419900BDDECE /* AlbumTab */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
 		62E480A127BCFEFB00BDDECE = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +261,7 @@
 		62E480ED27BD020200BDDECE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				62DD282C27BE65E100701047 /* Helper */,
 				62E480F227BD025A00BDDECE /* App */,
 				62E480F327BD026900BDDECE /* Constants */,
 				62E480F427BD026E00BDDECE /* Extension */,
@@ -255,9 +284,7 @@
 		62E480EF27BD020C00BDDECE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				62E4819127BD419900BDDECE /* AlbumTab */,
-				62E4819027BD419400BDDECE /* TodoTab */,
-				62E4818F27BD418600BDDECE /* PostTab */,
+				62DD283527BE82A500701047 /* TabView */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -292,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				62E4817627BD253A00BDDECE /* Constants.swift */,
+				62DD283127BE730D00701047 /* Images.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -679,6 +707,8 @@
 				622DB5EB27BD440400491A5C /* TodoModel.swift in Sources */,
 				62E4816827BD23F000BDDECE /* NetworkInterceptor.swift in Sources */,
 				62E4817727BD253A00BDDECE /* Constants.swift in Sources */,
+				62DD282E27BE65F200701047 /* DataBaseCreationHelper.swift in Sources */,
+				62DD283027BE6B8A00701047 /* DataBaseUpdateHelper.swift in Sources */,
 				62E4818A27BD292600BDDECE /* Album+DataBaseProperties.swift in Sources */,
 				62E4818C27BD2A9300BDDECE /* Post+DataBaseClass.swift in Sources */,
 				62E480B827BCFEFB00BDDECE /* FrameworkChallange.xcdatamodeld in Sources */,
@@ -698,8 +728,10 @@
 				62E4816627BD23E400BDDECE /* NetworkReachability.swift in Sources */,
 				62E4814027BD13CD00BDDECE /* PostViewController.swift in Sources */,
 				62E4813627BD13A300BDDECE /* AlbumView.swift in Sources */,
+				62DD283427BE743100701047 /* DataBaseFetchHelper.swift in Sources */,
 				62E4814627BD142C00BDDECE /* PostViewCell.swift in Sources */,
 				62E4814227BD141C00BDDECE /* AlbumViewCell.swift in Sources */,
+				62DD283227BE730D00701047 /* Images.swift in Sources */,
 				62E4818327BD28C600BDDECE /* Todos+DataBaseProperties.swift in Sources */,
 				62E4813C27BD13B900BDDECE /* TodoViewController.swift in Sources */,
 				62E4818127BD287000BDDECE /* Todos+DataBaseClass.swift in Sources */,
@@ -888,8 +920,10 @@
 				INFOPLIST_FILE = FrameworkChallange/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -916,8 +950,10 @@
 				INFOPLIST_FILE = FrameworkChallange/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

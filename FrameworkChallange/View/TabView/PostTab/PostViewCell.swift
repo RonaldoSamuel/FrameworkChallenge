@@ -13,7 +13,7 @@ class PostViewCell: UITableViewCell {
     static let identifier = "PostViewCell"
     var topConstraint: NSLayoutConstraint!
     var bottomConstraint: NSLayoutConstraint!
-            
+    
     var lblTitle: UILabel = {
         var lbl = UILabel()
         lbl.numberOfLines = 3
@@ -24,8 +24,8 @@ class PostViewCell: UITableViewCell {
     }()
     
     var arrowImage: UIImageView = {
-    var imgView = UIImageView()
-        imgView.image = UIImage(named: "ic_arrowDown")?.withRenderingMode(.alwaysTemplate)
+        var imgView = UIImageView()
+        imgView.image = UIImage(named: .ic_arrowDown)?.withRenderingMode(.alwaysTemplate)
         imgView.tintColor = .black
         imgView.contentMode = .scaleAspectFit
         imgView.translatesAutoresizingMaskIntoConstraints = false
@@ -33,7 +33,7 @@ class PostViewCell: UITableViewCell {
     }()
     
     var lblDescription: UILabel = {
-       var lbl = UILabel()
+        var lbl = UILabel()
         lbl.numberOfLines = 1
         lbl.isHidden = false
         lbl.textColor = .systemGray
@@ -41,7 +41,7 @@ class PostViewCell: UITableViewCell {
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         createSubViews()
@@ -99,7 +99,7 @@ class PostViewCell: UITableViewCell {
     func userClickEffect() {
         UIView.animate(withDuration:0.2, animations: {
             self.arrowImage.transform = CGAffineTransform(rotationAngle: self.topConstraint.constant == 5 ? CGFloat(179 * .pi/180.0) : 0)
-                })
+        })
         if topConstraint.constant == 5 {
             makeTableViewLarger()
         } else {
@@ -108,7 +108,7 @@ class PostViewCell: UITableViewCell {
     }
     
     func makeTableViewLarger() {
-            backgroundColor = UIColor(red: 0.97, green: 0.97, blue: 0.97, alpha: 1.00)
+        backgroundColor = UIColor(red: 0.97, green: 0.97, blue: 0.97, alpha: 1.00)
         lblTitle.numberOfLines = 0
         lblDescription.numberOfLines = 0
         topConstraint.constant = 10

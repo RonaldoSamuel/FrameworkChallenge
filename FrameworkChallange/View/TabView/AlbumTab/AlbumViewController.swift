@@ -29,6 +29,13 @@ class AlbumViewController: UIViewController {
     }
 
     func bindView() {
+        
+        viewModel.dataSouce.bind { value in
+            if !value.isEmpty {
+                self.presentationView.tableList.refreshControl?.endRefreshing()
+            }
+        }.disposed(by: disposable)
+        
         viewModel.dataSouce
             .bind(
                 to: presentationView
@@ -44,16 +51,15 @@ class AlbumViewController: UIViewController {
                 cell.configCell(data, index: index)
             }.disposed(by: disposable)
         
-        self.presentationView.tableList
+        presentationView.tableList
           .rx.setDelegate(self)
           .disposed(by: disposable)
         
-        self.presentationView.tableList.rx.itemSelected
-          .subscribe(onNext: { [weak self] indexPath in
-              let cell = self?.presentationView.tableList.cellForRow(at: indexPath) as? AlbumViewCell
-              self?.presentationView.tableList.beginUpdates()
-              self?.presentationView.tableList.endUpdates()
-          }).disposed(by: disposable)
+        presentationView.tableList.refreshControl?.rx
+            .controlEvent(.valueChanged)
+            .bind {
+                self.viewModel.fetchAlbums()
+            }.disposed(by: disposable)
     }
 
 }

@@ -14,6 +14,7 @@ class TodoView: UIView, BaseView {
         table.separatorInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
         table.backgroundColor = .white
         table.separatorColor = .gray
+        table.rowHeight = 60
         table.tableFooterView = UIView()
         table.refreshControl = UIRefreshControl()
         table.register(TodoViewCell.self, forCellReuseIdentifier: TodoViewCell.identifier)

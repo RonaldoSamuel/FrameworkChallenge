@@ -25,96 +25,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
         
+        self.coordinator?.start()
+        
         // MARK: Networking
         NetworkReachability.shared.startNetworkMonitoring()
         
-        JsonClient.getAlbums()
-            .asObservable()
-            .subscribe(
-                onNext: {
-                    result in
-                    self.createAlbums(item: result)
-                },
-                onError: { error in
-                    print(error)
-                }
-            ).disposed(by: disposable)
-        
-        JsonClient.getPosts()
-            .asObservable()
-            .subscribe(
-                onNext: {
-                    result in
-                    self.createPosts(item: result)
-                },
-                onError: { error in
-                    print(error)
-                }
-            ).disposed(by: disposable)
-        
-        JsonClient.getTodos()
-            .asObservable()
-            .subscribe(
-                onNext: {
-                    result in
-                    self.createTodos(item: result)
-                    self.coordinator?.start()
-                },
-                onError: { error in
-                    print(error)
-                }
-            ).disposed(by: disposable)
+        // MARK: Database Management
+        DataBaseCreationHelper.instance.callApis()
         
         return true
     }
     
-    func createAlbums(item: AlbumCodable) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Album", in: context)
-        
-        for value in item {
-            let newAlbum = AlbumS(entity: entity!, insertInto: context)
-            
-            newAlbum.id = Int32(value.id)
-            newAlbum.title = value.title
-            newAlbum.userId = Int32(value.userID)
-        }
-        
-        saveContext()
-    }
-    
-    func createPosts(item: PostCodable) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Post", in: context)
-        
-        for value in item {
-            let newPost = PostS(entity: entity!, insertInto: context)
-            
-            newPost.id = Int32(value.id)
-            newPost.title = value.title
-            newPost.userId = Int32(value.userID)
-            newPost.body = value.body
-          
-        }
-        
-        saveContext()
-    }
-    
-    func createTodos(item: TodoCodable) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Todos", in: context)
-        
-        for value in item {
-            let newTodo = TodoS(entity: entity!, insertInto: context)
-            
-            newTodo.id = Int32(value.id)
-            newTodo.userId = Int32(value.userID)
-            newTodo.title = value.title
-            newTodo.completed = value.completed
-        }
-        
-        saveContext()
-    }
     
     
     // MARK: - Core Data stack
@@ -156,8 +77,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             } catch {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
     }

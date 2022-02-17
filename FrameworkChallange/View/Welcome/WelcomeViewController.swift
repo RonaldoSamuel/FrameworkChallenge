@@ -17,13 +17,9 @@ class WelcomeViewController: UIViewController {
     weak var coordinator: WelcomeCoordinator?
     var disposable: DisposeBag = DisposeBag()
     
-    
-    
-    
     override func loadView() {
         view = presentationView
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +29,13 @@ class WelcomeViewController: UIViewController {
     func bindView() {
         
         presentationView.enterButton.rx
-          .tapGesture()
-          .when(.recognized)
-          .subscribe(onNext: { _ in
-              self.coordinator?.parentCoordinator?.tabView()
-          })
-          .disposed(by: disposable)
+            .tapGesture().when(.recognized)
+            .subscribe(
+                onNext: { _ in
+                    self.coordinator?.parentCoordinator?.tabView()
+                })
+            .disposed(by: disposable)
         
-        
-    }    
+    }
     
 }
