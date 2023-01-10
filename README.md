@@ -10,9 +10,6 @@ When you open the app for the first time the app grab the items from the api and
 
 The layout of the app was first designed in a website called "Figma" that can help you to make a quick prototype for your project.
 
-if you are interested to see how the app was first imagined here you can find: <br />
-https://www.figma.com/file/YH8rxUv6cw5nXhrBEAd7WP/Untitled?node-id=0%3A1
-
 # Cloning the project
 
 How do i run this project ? <br />
