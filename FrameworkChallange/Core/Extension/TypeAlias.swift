@@ -9,6 +9,9 @@ import RxSwift
 import RxCocoa
 import RxGesture
 import Alamofire
+import FirebaseCore
+import FirebaseAuth
+import FirebaseFirestore
 
 public typealias DisposeBag = RxSwift.DisposeBag
 public typealias BehaviorSubject = RxSwift.BehaviorSubject
@@ -17,3 +20,5 @@ public typealias Observable = RxSwift.Observable
 public typealias Disposables = RxSwift.Disposables
 public typealias Cancelable = RxSwift.Cancelable
 public typealias MainScheduler = RxSwift.MainScheduler
+public typealias AuthFirebase = Auth
+public typealias firebaseBD = Firestore

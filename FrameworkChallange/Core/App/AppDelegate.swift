@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        FirebaseApp.debugDescription()
         
         let navController = UINavigationController()
         coordinator = MainCoordinator(navigationController: navController)
@@ -25,7 +28,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
         
-        self.coordinator?.start()
+        if AuthFirebase.auth().currentUser != nil {
+            self.coordinator?.start()
+//            self.coordinator?.tabView()
+        } else {
+            self.coordinator?.start()
+        }
         
         // MARK: Networking
         NetworkReachability.shared.startNetworkMonitoring()

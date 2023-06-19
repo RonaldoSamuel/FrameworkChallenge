@@ -10,10 +10,10 @@ import UIKit
 import CoreData
 
 class WelcomeViewController: UIViewController {
-    typealias View = WelcomeView
+    typealias View = LoginView
     typealias Navigation = WelcomeCoordinator
     
-    var presentationView = WelcomeView()
+    var presentationView = LoginView()
     weak var coordinator: WelcomeCoordinator?
     var disposable: DisposeBag = DisposeBag()
     
@@ -27,14 +27,13 @@ class WelcomeViewController: UIViewController {
     }
     
     func bindView() {
-        
-        presentationView.enterButton.rx
-            .tapGesture().when(.recognized)
-            .subscribe(
-                onNext: { _ in
-                    self.coordinator?.parentCoordinator?.tabView()
-                })
-            .disposed(by: disposable)
+//        presentationView.enterButton.rx
+//            .tapGesture().when(.recognized)
+//            .subscribe(
+//                onNext: { _ in
+//                    self.coordinator?.parentCoordinator?.tabView()
+//                })
+//            .disposed(by: disposable)
         
     }
     

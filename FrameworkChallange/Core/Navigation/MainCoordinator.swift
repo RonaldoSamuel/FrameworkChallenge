@@ -18,7 +18,7 @@ class MainCoordinator: NSObject, CoordinatorProtocol, UINavigationControllerDele
     
     func start() {
             navigationController.delegate = self
-            welcome()
+            login()
     }
     
     func welcome() {
@@ -30,6 +30,13 @@ class MainCoordinator: NSObject, CoordinatorProtocol, UINavigationControllerDele
     
     func tabView() {
         let child = TabCoordinator(navigationController: navigationController)
+        child.parentCoordinator = self
+        childCoordinators.append(child)
+        child.start()
+    }
+    
+    func login() {
+        let child = LoginCoordinator(navigationController: navigationController)
         child.parentCoordinator = self
         childCoordinators.append(child)
         child.start()
