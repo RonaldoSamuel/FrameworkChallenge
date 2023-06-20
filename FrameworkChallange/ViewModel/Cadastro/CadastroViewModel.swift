@@ -53,40 +53,30 @@ class CadastroViewModel {
     
     func cadastrar() {
         
+        AuthFirebase.auth().createUser(withEmail: cadastroModel.email, password: cadastroModel.senha) {
+            resultado, erro in
+            if let resultado = resultado {
+                print("Usuário cadastrado com sucesso!")
+                
+                self.db.collection("Usuarios").document(self.email.value).setData([
+                    "nome": self.cadastroModel.nome,
+                    "senha": self.cadastroModel.senha
+                ]) {
+                    erro in
+                    if let erro = erro {
+                        print ("erro ao cadastrar usuario\(erro.localizedDescription)")
+                    } else {
+                        print ("Cadastrado com sucesso")
+                    }
+                    
+                }
+                
+            }
+            
+            if let erro = erro {
+                print("Falha ao cadastrar o usuário!")
+            }
+        }
+        
     }
-    
-    
-    
-    
-    
-    
-//    func cadastrar() {
-//        AuthFirebase.auth().createUser(withEmail: cadastroModel.email, password: cadastroModel.senha) {
-//            resultado, erro in
-//
-//            if let erro = erro {
-//                print("deu ruim")
-//                print(erro.localizedDescription)
-//            }
-//
-//            if let resultado = resultado {
-//                print("Usuario Cadastrado com sucesso")
-//                print(resultado.user.email ?? "")
-//
-//                self.db.collection("usuarios").document("\(resultado.user.email)").setData([
-//                    "nome": self.cadastroModel.nome,
-//                    "senha": self.cadastroModel.senha
-//                ]) {
-//                    erro in
-//                    if let erro = erro {
-//                        print(erro.localizedDescription)
-//                    } else {
-//                        print("cadastrado com sucesso")
-//                    }
-//
-//                }
-//
-//            }
-//        }
-//    }
 }
